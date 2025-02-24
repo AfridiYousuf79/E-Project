@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofa</title>
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- style.css link  -->
+     <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- jquerry cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- AOS css link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<!-- font awosome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+
+    <style>
+        *{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  background-color: #ededed;
+}
+
+/* navbar */
+
+nav{
+  background-color: #ededed;
+  width: 100%;
+  height: 100%;
+  
+}
+#navbarSupportedContent ul{
+  text-align: center;
+  /* justify-content: center; */
+  align-items: center;
+}
+#navbarSupportedContent ul li{
+  width: 160px;
+}
+#navbarSupportedContent ul li a{
+  font-size: 21px;
+  color: #32435c;
+  transition: 0.5 ease all;
+}
+#navbarSupportedContent ul li a:hover{
+  text-decoration: underline;
+}
+.basket {
+position: relative;
+font-size: 24px;
+margin-left: 20px;
+}
+.basket a i{
+color: #32435c;
+}
+
+.cart-count {
+position: absolute;
+top: -10px;
+right: -10px;
+background: #32435c;
+color: white;
+border-radius: 50%;
+padding: 3px 8px;
+font-size: 12px;
+min-width: 25px;
+text-align: center;
+}
+#btn{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.btn{
+background-color: #32435c;
+margin: 10px;
+color: white;
+font-size: 16px;
+font-family: "Poppins", serif;
+font-weight: 600;
+}
+.btn a{
+  margin: 10px;
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+/* drop down and mega menu */
+.dropdown-menu{
+  padding: .5em;
+  border-radius: 0;
+  box-shadow: 0px 3px 6px gray;
+  background-color: #ededed;
+  border: none;
+  display: none; /* Hide the dropdown by default */
+}
+
+.dropdown-menu.show{
+  display: block; /* Show dropdown when active */
+}
+
+.dropdown-menu ul{
+  list-style: none;
+  padding: 30px;
+}
+.dropdown-menu ul li{
+  width: 100%;
+  text-align: center;
+}
+
+
+.dropdown-menu li a{
+  padding: .5em 1em;
+  text-decoration: none;
+}
+ul li h3{
+  color: #fca311;
+  font-family: "Poppins" , serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.dropdown-menu li:first-child a{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.dropdown-menu ul li a:hover{
+  background-color: transparent;
+}
+
+
+/* toogle icon */
+
+button i{
+  color: #fca311;
+  font-weight: 600;
+  font-size: 30px;
+}
+@media screen and (min-width:600px) {
+  .dropdown-menu.show{
+    display: flex; /* Or use flex if needed */
+  }
+  .dropdown-menu ul{
+    list-style: none;
+    /* padding: 30px; */
+  }
+  
+}
+
+
+/* footer */
+
+footer {
+  margin-top: 30px;
+  font-family: "Poppins" , serif;
+  color: #32435c;
+  background-color: #d2d0d0;
+  padding: 40px 20px;
+}
+/* #856025 background color code */
+.footer-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.footer-column {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 200px;
+}
+.footer-column img {
+  max-width: 100%;
+  border-radius: 8px;
+  /* margin-left: -200px; */
+}
+.footer-column h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.footer-column p,
+.footer-column li {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #32435c;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column a {
+  color: #32435c;
+  text-decoration: none;
+}
+.footer-column a:hover {
+  color: #fca311;
+  text-decoration: underline;
+}
+
+/* icons */
+
+.icons {
+  text-align: center;
+}
+
+.icons ul {
+  list-style: none;
+  padding: 0;
+  /* display: flex; */
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons ul li {
+  /* display: inline-block; */
+}
+
+.icons ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fca311;
+  color: #ededed;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.icons ul li a:hover {
+  background-color: #ededed; /* Red hover effect */
+  color: #fca311;
+  transform: scale(1.1);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #FFFBEA;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+@media (max-width:600px) {
+
+/* carousel image 600px full screen */
+.carousel-item img{
+  width: 100%;
+  height: 300px;
+}
+
+#heading1{
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px;
+  font-size: 30px;
+  color: #fca311;
+}
+.footer-column {
+flex: 1 1 100%;
+}
+.icons {
+text-align: center;
+}
+.icons ul {
+list-style: none;
+padding: 0;
+/* display: flex; */
+gap: 15px;
+justify-content: center;
+align-items: center;
+}
+.icons ul li {
+display: inline-block;
+}
+
+.dropdown-menu ul{
+list-style: none;
+padding: 0px;
+}
+}
+
+    </style>
+</head>
+<body>
+   <!-- navbar -->
+
+   <nav class="navbar navbar-expand-lg  px-4">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" width="140px" height="80px" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul>
+                <li><h3>Hotel Sofa</h3></li>
+                <li><a class="dropdown-item" href="Lobby&Reception.html">Reception</a></li>
+                <li><a class="dropdown-item" href="Cafe&Restaurant.html">Restaurant</a></li>
+                <li><a class="dropdown-item" href="Bar&Lounge.html">Lounge</a></li>
+                <li><a class="dropdown-item" href="Conference&Business.html">Conference </a></li>
+              </ul>
+            <ul>
+                <li><h3>Home Sofa</h3></li>
+                <li><a class="dropdown-item" href="LivingRoom.html">Living Room</a></li>
+                <li><a class="dropdown-item" href="Bedroom.html">Bedroom</a></li>
+                <li><a class="dropdown-item" href="DrawingRoom.html">Drawing Room</a></li>
+                <li><a class="dropdown-item" href="TVLounge.html">TV Lounge</a></li>
+            </ul>
+            <ul>
+              <li><h3>Office Sofa</h3></li>
+              <li><a class="dropdown-item" href="Executive.html">Executive</a></li>
+              <li><a class="dropdown-item" href="MeetingRoom.html">Meeting Room</a></li>
+              <li><a class="dropdown-item" href="StaffRoom.html">Staff Room</a></li>
+              <li><a class="dropdown-item" href="Presentation.html">Presentation</a></li>
+            </ul>
+            </div>
+          </li>
+
+          <li class="nav-item ml-2">
+            <a class="nav-link active" aria-current="page" href="#" target="_blank">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" target="_blank">Gallery</a>
+          </li>
+          
+        </ul>
+
+        <!-- login or sign up button -->
+        <div id="btn">
+          <button class="btn">
+            <a href="signup.html" target="_blank">Sign-in</a>
+          </button>
+          <button class="btn">
+            <a href="login.html" target="_blank">Log-in</a>
+          </button>
+      </div>
+
+      <div class="basket">
+        <a href="purchase.html" target="_blank">
+          <i class="bi bi-bag-check-fill"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <footer>
+    <div class="footer-container">
+      <!-- Image Section -->
+      <div class="footer-column">
+        <img src="logo.png" alt="About Us Image" width="300px" height="200">
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:info@yousufcollection.com">info@OxfordSofa.com</a></li>
+          <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+          <li>Address: 123 Fashion Street, Karachi</li>
+        </ul>
+      </div>
+      <!-- social media icons -->
+      <div class="icons">
+        <ul>
+          <li><a href="#" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <i class="bi bi-youtube"></i>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+ 
+  </footer>
+
+
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+</body>
+</html>

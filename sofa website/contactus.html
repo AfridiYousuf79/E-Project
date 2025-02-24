@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- style.css link  -->
+     <link rel="stylesheet" href="contactus.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+<!-- bootstrap icon link -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+
+</head>
+<body>
+   <!-- navbar -->
+
+   <nav class="navbar navbar-expand-lg  px-4">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" width="140px" height="80px" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul>
+                <li><h3>Hotel Sofa</h3></li>
+                <li><a class="dropdown-item" href="Lobby&Reception.html">Reception</a></li>
+                <li><a class="dropdown-item" href="Cafe&Restaurant.html">Restaurant</a></li>
+                <li><a class="dropdown-item" href="Bar&Lounge.html">Lounge</a></li>
+                <li><a class="dropdown-item" href="Conference&Business.html">Conference </a></li>
+              </ul>
+            <ul>
+                <li><h3>Home Sofa</h3></li>
+                <li><a class="dropdown-item" href="LivingRoom.html">Living Room</a></li>
+                <li><a class="dropdown-item" href="Bedroom.html">Bedroom</a></li>
+                <li><a class="dropdown-item" href="DrawingRoom.html">Drawing Room</a></li>
+                <li><a class="dropdown-item" href="TVLounge.html">TV Lounge</a></li>
+            </ul>
+            <ul>
+              <li><h3>Office Sofa</h3></li>
+              <li><a class="dropdown-item" href="Executive.html">Executive</a></li>
+              <li><a class="dropdown-item" href="MeetingRoom.html">Meeting Room</a></li>
+              <li><a class="dropdown-item" href="StaffRoom.html">Staff Room</a></li>
+              <li><a class="dropdown-item" href="Presentation.html">Presentation</a></li>
+            </ul>
+            </div>
+          </li>
+
+          <li class="nav-item ml-2">
+            <a class="nav-link active" aria-current="page" href="about.html" target="_blank">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="gallery.html" target="_blank">Gallery</a>
+          </li>
+          
+        </ul>
+
+        <!-- login or sign up button -->
+        <div id="btn">
+          <button class="btn">
+            <a href="signup.html" target="_blank">Sign-in</a>
+          </button>
+          <button class="btn">
+            <a href="login.html" target="_blank">Log-in</a>
+          </button>
+      </div>
+
+      <div class="basket">
+        <a href="purchase.html" target="_blank">
+          <i class="bi bi-bag-check-fill"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+        
+      </div>
+    </div>
+  </nav>
+
+
+  
+<div class="container">
+
+
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+
+    <div class="contact-info">
+        <div class="contact-details">
+           
+            <p>If you have any questions or inquiries, feel free to contact us. We are here to help you!</p>
+            <ul>
+                <li>
+                  <i class="bi bi-telephone-fill"></i>
+                  <strong>Phone:</strong>
+                   +92 331245677
+                  </li>
+                <li>
+                  <i class="bi bi-envelope-open-fill"></i>
+                  <strong>Email:</strong>
+                  OXFORDSOFA123@gmail.com
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <strong>Address:</strong>
+                  OXFORD SOFA STREET#123
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name </label> 
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+   
+</section>
+
+
+<!-- MAP -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.017148282561!2d67.0743981!3d24.8632639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ea3db108f41%3A0x42acc4507358b160!2sAptech%20Learning%2C%20Shahrah%20e%20Faisal%20Center!5e0!3m2!1sen!2s!4v1739160023986!5m2!1sen!2s" width="100%" height="500px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe >
+
+
+
+
+</div>
+
+
+  <!-- footer -->
+
+  <footer>
+    <div class="footer-container">
+      <!-- Image Section -->
+      <div class="footer-column">
+        <img src="logo.png" alt="About Us Image" width="300px" height="200">
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:info@yousufcollection.com">info@OxfordSofa.com</a></li>
+          <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+          <li>Address: 123 Fashion Street, Karachi</li>
+        </ul>
+      </div>
+      <!-- social media icons -->
+      <div class="icons">
+        <ul>
+          <li><a href="#" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <i class="bi bi-youtube"></i>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+ 
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
